@@ -101,7 +101,7 @@ git commit -m "Resolved merge conflict between main and feature branch"
 - **The conflict was resolved manually by editing the file, staging the resolved file, and completing the merge with a commit.**
 
 # Full Example Workflow
-# Initial setup
+1. Initial setup
 mkdir git-conflict-example
 cd git-conflict-example
 git init
@@ -109,27 +109,27 @@ echo "Line 1" > file.txt
 git add file.txt
 git commit -m "Initial commit"
 
-# Create and switch to feature branch
+2.Create and switch to feature branch
 git checkout -b feature
 
-# Developer B's changes
+3. Developer B's changes
 echo "Line 2 from feature branch" >> file.txt
 git add file.txt
 git commit -m "Add line from feature branch"
 
-# Switch back to main branch
+4. Switch back to main branch
 git checkout main
 
-# Developer A's changes
+5. Developer A's changes
 echo "Line 2 from main branch" >> file.txt
 git add file.txt
 git commit -m "Add line from main branch"
 
-# Attempt to merge feature branch into main
+6. Attempt to merge feature branch into main
 git merge feature
 
-# Resolve conflict
-# Edit file.txt to:
+7. Resolve conflict
+ Edit file.txt to:
 # Line 1
 # Line 2 from main branch
 # Line 2 from feature branch
